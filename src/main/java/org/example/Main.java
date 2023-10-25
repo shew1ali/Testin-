@@ -63,8 +63,6 @@ public class Main {
     }
 
     public static String listToJson(List<Employee> list) {
-
-
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.setPrettyPrinting().create();
         Type listType = new TypeToken<List<Employee>>() {
@@ -89,7 +87,6 @@ public class Main {
     public static List<Employee> parseXML(String fileName) throws IOException, SAXException, ParserConfigurationException {
         List<Employee> staff = new ArrayList<>();
         try {
-
             File file = new File(fileName);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
